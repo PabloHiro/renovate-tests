@@ -1,0 +1,20 @@
+version = 1
+requires-python = ">=3.11"
+
+[[package]]
+name = "requests"
+version = "2.28.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/requests-2.28.0.tar.gz", hash = "sha256:e9bbe7e6e9a964fd1f570b4b4c7b53f", size = 109480 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/requests-2.28.0-py3-none-any.whl", hash = "sha256:1a720e8862a41aa22e339373b526f508ef0c8988baf48b84d3fc891a8e237efb", size = 60856 },
+]
+
+[[package]]
+name = "valid-test"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [{ name = "requests" }]
+
+[package.metadata]
+requires-dist = [{ name = "requests", specifier = ">=2.28.0" }]
